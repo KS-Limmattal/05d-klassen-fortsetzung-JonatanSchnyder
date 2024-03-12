@@ -7,5 +7,24 @@
  * andere Karte hat.
  */
 public class Card {
+	private Suit suit;
+	private Rank rank;
+
+	public Card(Suit suit, Rank rank) {
+		this.suit = suit;
+		this.rank = rank;
+	}
+
+	@Override
+	public String toString() {
+		return suit + " " + rank;
+	}
+
+	public boolean equals(Card other) {
+		if (this.suit == other.suit && this.rank == other.rank) {
+			return true;
+		}
+		return false;
+	}
     
 }
